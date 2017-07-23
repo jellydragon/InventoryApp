@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#689f38</color>
+
+    <color name="colorPrimaryDark">#33691e</color>
+
+    <color name="colorAccent">#1a9920</color>
+
+    <color name="editorColorPrimary">#33691e</color>
+
+    <color name="editorColorPrimaryDark">#394450</color>
+
+    <color name="catalogPriceColor">#424242</color>
+
+    <color name="catalogNameColor">#2B3D4D</color>
+
+    <color name="catalogQuantityColor">#AEB6BD</color>
+</resources>

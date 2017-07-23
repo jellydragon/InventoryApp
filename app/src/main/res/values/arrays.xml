@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_category_options">
+        <item>@string/category_unisex</item>
+        <item>@string/category_male</item>
+        <item>@string/category_female</item>
+    </string-array>
+</resources>

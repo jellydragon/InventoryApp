@@ -1,0 +1,15 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="activity_margin">16dp</dimen>
+    <dimen name="margin_small">4dp</dimen>
+    <dimen name="button_order_height">54dp</dimen>
+    <dimen name="padding_normal">16dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="button_change_quantity_size">54dp</dimen>
+    <dimen name="padding_xtra_small">4dp</dimen>
+    <dimen name="product_image_height">100dp</dimen>
+    <dimen name="quantity_field_width">54dp</dimen>
+    <dimen name="product_name_size">24sp</dimen>
+    <dimen name="spinner_height">48dp</dimen>
+</resources>
+

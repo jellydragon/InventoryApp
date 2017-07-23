@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Inventory</string>
+
+    <string name="action_insert_dummy_data">Insert Dummy Data</string>
+
+    <string name="action_delete_all_entries">Delete All Products</string>
+
+    <string name="editor_activity_title_new_pet">Add a Product</string>
+
+    <string name="action_save">Save</string>
+
+    <string name="action_delete">Delete</string>
+
+    <string name="category_overview">Overview</string>
+
+    <string name="category">Category</string>
+
+    <string name="category_measurement">Quantity</string>
+
+    <string name="hint_product_name">Name</string>
+
+    <string name="hint_product_supplier_name">Supplier name</string>
+
+    <string name="hint_product_supplier_email">Supplier e-mail</string>
+
+    <string name="hint_product_price">Price</string>
+
+    <string name="category_unisex">Unisex</string>
+
+    <string name="category_male">Male</string>
+
+    <string name="category_female">Female</string>
+
+    <string name="editor_insert_product_failed">Error with saving product</string>
+
+    <string name="editor_insert_product_successful">Product saved successfully</string>
+
+    <string name="empty_view_title_text">No products found</string>
+
+    <string name="empty_view_subtitle_text">Get started by adding a product</string>
+
+    <string name="add_a_product">Add a Product</string>
+
+    <string name="edit_product">Edit Product</string>
+
+    <string name="error_update">Error updating product</string>
+
+    <string name="unsaved_changes_dialog_msg">Discard your changes and quit editing?</string>
+
+    <string name="discard">Discard</string>
+
+    <string name="keep_editing">Keep Editing</string>
+
+    <string name="editor_delete_product_successful">Product deleted</string>
+
+    <string name="editor_delete_product_failed">Error with deleting product</string>
+
+    <string name="delete_dialog_msg">Delete this product?</string>
+
+    <string name="delete">Delete</string>
+
+    <string name="cancel">Cancel</string>
+
+    <string name="product_deleted">Product deleted</string>
+
+    <string name="error_delete">Error deleting product</string>
+
+    <string name="unknown_category">Unknown category</string>
+
+    <string name="button_sale_text">sale</string>
+
+    <string name="category_price">Price</string>
+
+    <string name="unit_product_price">$</string>
+
+    <string name="hint_product_quantity">quantity</string>
+
+    <string name="toast_fill_all_fields">Please fill all fields</string>
+
+    <string name="button_order_more">Order more…</string>
+
+    <string name="new_order">New Order</string>
+
+    <string name="currency_symbol_euro">€</string>
+
+    <string name="quantity_left"> left</string>
+
+    <string name="button_choose_image">Choose image</string>
+
+    <string name="email_hello">Hello</string>
+
+    <string name="email_send_more">Could you please send us more</string>
+
+    <string name="email_ending">Best regards,</string>
+
+</resources>
