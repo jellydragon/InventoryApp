@@ -41,6 +41,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 
+import static com.example.android.inventoryapp.R.string.category_male;
+
 /**
  * Allows user to create a new product or edit an existing one.
  */
@@ -180,7 +182,7 @@ public class EditorActivity extends AppCompatActivity implements LoaderCallbacks
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String selection = (String) parent.getItemAtPosition(position);
                 if (!TextUtils.isEmpty(selection)) {
-                    if (selection.equals(getString(R.string.category_male))) {
+                    if (selection.equals(getString(category_male))) {
                         mCategory = ProductEntry.CATEGORY_MALE;
                     } else if (selection.equals(getString(R.string.category_female))) {
                         mCategory = ProductEntry.CATEGORY_FEMALE;
@@ -273,7 +275,9 @@ public class EditorActivity extends AppCompatActivity implements LoaderCallbacks
         if (TextUtils.isEmpty(nameString)
                 || TextUtils.isEmpty(supplierString)
                 || TextUtils.isEmpty(supplierEmailString)
-                || TextUtils.isEmpty(priceString)) {
+                || TextUtils.isEmpty(priceString)
+                || Integer.valueOf(quantityString) < 0
+                || bitmap == null) {
             Toast.makeText(this, R.string.toast_fill_all_fields, Toast.LENGTH_SHORT).show();
             return false;
         }
@@ -494,15 +498,7 @@ public class EditorActivity extends AppCompatActivity implements LoaderCallbacks
                 deleteProduct();
             }
         });
-        builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int id) {
-                // User clicked the "Cancel" button, so dismiss the dialog
-                // and continue editing the product.
-                if (dialog != null) {
-                    dialog.dismiss();
-                }
-            }
-        });
+        builder.setNegativeButton(R.string.cancel, null);
 
         // Create and show the AlertDialog
         AlertDialog alertDialog = builder.create();

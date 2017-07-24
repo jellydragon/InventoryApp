@@ -12,8 +12,6 @@ import android.widget.TextView;
 
 import com.example.android.inventoryapp.data.ProductContract.ProductEntry;
 
-import static com.example.android.inventoryapp.R.id.price;
-import static com.example.android.inventoryapp.R.id.quantity;
 
 /**
  * {@link ProductCursorAdapter} is an adapter for a list or grid view
@@ -60,8 +58,8 @@ public class ProductCursorAdapter extends CursorAdapter {
     public void bindView(View view, final Context context, Cursor cursor) {
         // Find fields to populate in inflated template
         final TextView productName = (TextView) view.findViewById(R.id.name);
-        final TextView productQuantity = (TextView) view.findViewById(quantity);
-        final TextView productPrice = (TextView) view.findViewById(price);
+        final TextView productQuantity = (TextView) view.findViewById(R.id.quantity);
+        final TextView productPrice = (TextView) view.findViewById(R.id.price);
         final ContentValues contentValues = new ContentValues();
 
         // Extract properties from cursor
