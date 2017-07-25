@@ -45,7 +45,7 @@ public class ProductCursorAdapter extends CursorAdapter {
     }
 
     /**
-     * This method binds the pet data (in the current row pointed to by cursor) to the given
+     * This method binds the product data (in the current row pointed to by cursor) to the given
      * list item layout. For example, the name for the current pet can be set on the name TextView
      * in the list item layout.
      *
@@ -56,11 +56,12 @@ public class ProductCursorAdapter extends CursorAdapter {
      */
     @Override
     public void bindView(View view, final Context context, Cursor cursor) {
+
         // Find fields to populate in inflated template
         final TextView productName = (TextView) view.findViewById(R.id.name);
         final TextView productQuantity = (TextView) view.findViewById(R.id.quantity);
         final TextView productPrice = (TextView) view.findViewById(R.id.price);
-        final ContentValues contentValues = new ContentValues();
+        final Button sellButton = (Button) view.findViewById(R.id.button_sale);
 
         // Extract properties from cursor
         final String id = cursor.getString(cursor.getColumnIndexOrThrow(
@@ -78,11 +79,11 @@ public class ProductCursorAdapter extends CursorAdapter {
         productPrice.setText(String.valueOf(price));
 
         // Set button click listener
-        Button sellButton = (Button) view.findViewById(R.id.button_sale);
         sellButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (quantity > 0) {
+                    ContentValues contentValues = new ContentValues();
                     contentValues.put(ProductEntry.COLUMN_PRODUCT_QUANTITY, quantity - 1);
                     String selection = ProductEntry._ID + "=?";
 

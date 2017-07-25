@@ -67,6 +67,7 @@ public class EditorActivity extends AppCompatActivity implements LoaderCallbacks
     private SQLiteOpenHelper mDbHelper;
     private Uri currentProductUri;
     private boolean mProductHasChanged;
+    private boolean mImageAdded = false;
     private View.OnTouchListener mTouchListener = new View.OnTouchListener() {
         @Override
         public boolean onTouch(View view, MotionEvent motionEvent) {
@@ -276,8 +277,8 @@ public class EditorActivity extends AppCompatActivity implements LoaderCallbacks
                 || TextUtils.isEmpty(supplierString)
                 || TextUtils.isEmpty(supplierEmailString)
                 || TextUtils.isEmpty(priceString)
-                || Integer.valueOf(quantityString) < 0
-                || bitmap == null) {
+                || Integer.valueOf(quantityString) <= 0
+                || mImageAdded == false) {
             Toast.makeText(this, R.string.toast_fill_all_fields, Toast.LENGTH_SHORT).show();
             return false;
         }
@@ -375,6 +376,7 @@ public class EditorActivity extends AppCompatActivity implements LoaderCallbacks
             mCategorySpinner.setSelection(mCategory);
 
             mProductImageView.setImageBitmap(ImageUtils.getImage(mImage));
+            mImageAdded = true;
 
             mOrderMoreButton.setVisibility(View.VISIBLE);
             mOrderMoreButton.setOnClickListener(new View.OnClickListener() {
@@ -527,6 +529,7 @@ public class EditorActivity extends AppCompatActivity implements LoaderCallbacks
             if (resultData != null) {
                 Uri mUri = resultData.getData();
                 Bitmap image = getBitmapFromUri(mUri);
+                mImageAdded = true;
                 mProductImageView.setImageBitmap(image);
             }
         }
